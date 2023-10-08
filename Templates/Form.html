@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Water Portability Checker</title>
+    <style>
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+.banner{
+    background-image:linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)) ,url(/static/main_back.jpg);
+    width: 100%;
+    height:100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+.navbar{
+    background-color: #77a3e4;
+    width: 100%;
+    margin: auto;
+    padding: 35px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-brand{
+    width: 120px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    padding-left: 5px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #009688;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+    
+}
+
+
+.value-form{
+    align-items: center;
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+    width: 450px;
+}
+
+.header{
+    font-size: 30px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff4f;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(154, 144, 144, 0.627);
+}
+
+.form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.form-group input[type="text"] {
+    width: 80%;
+}
+
+.form-group.input-half {
+    width: 48%;
+}
+
+.form-group.input-half:first-child {
+    margin-right: 4%;
+}
+
+.btn-primary {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+    </style>
+    
+</head>
+<body>
+    <div class="banner">
+        <nav class="navbar">
+            <ul>
+                <li><a class="navbar-brand" href="Home.html">Water Portability Checker</a></li>
+            </ul>
+            <ul>
+                <li><a href="#">Check Now</a></li>
+                <li><a href="Tips.html">Tips</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </nav>
+        <br>
+
+        <div class="container">
+
+            <h1 class="header">Enter Values</h1><br>
+            <form class="form"action="/portability"  method="post">
+
+                <div class="form-group">
+                    <label for="ph">pH Level:</label>
+                    <input type="text" class="form-control" id="ph" name="ph" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="hardness">Hardnss:</label>
+                    <input type="text" class="form-control" id="ph" name="hardness" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-lab" for="solids">Solids:</label>
+                    <input type="text" class="form-control" id="ph" name="solids" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-lab" for="chloramines">Chloramines:</label>
+                    <input type="text" class="form-control" id="ph" name="chloramines" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-lab" for="sulfate">Sulfate:</label>
+                    <input type="text" class="form-control" id="ph" name="sulfate" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-lab" for="conductivity">Conductivity:</label>
+                    <input type="text" class="form-control" id="ph" name="conductivity" required>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-lab" for="organic_carbon">Organic Carbon:</label>
+                    <input type="text" class="form-control" id="ph" name="organic_carbon" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-lab" for="trihalomethanes">Trihalomethanes:</label>
+                    <input type="text" class="form-control" id="ph" name="trihalomethanes" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="turbidity">Turbidity:</label>
+                    <input type="text" class="form-control" id="turbidity" name="turbidity" required>
+                </div>
+                
+                
+                <br>
+                
+                <button type="submit" class="btn-primary"><span></span> Portability</button>
+    
+                
+            </form>
+            
+
+        </div>
+    </div>
+</body>
+</html>
